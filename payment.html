@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Form2</title>
+
+<style>
+    body{font-family: Arial, Helvetica, sans-serif; background:#f7f7f7; padding:30px}
+    .container{max-width:540px;margin:0 auto;background:#fff;border:1px solid #ccc;padding:18px;box-shadow:0 2px 4px rgba(0,0,0,0.06)}
+    h1{font-weight:400;color:#555;margin-left:6px}
+    table{width:100%;border-collapse:collapse}
+    td.label{width:36%;padding:6px 8px;vertical-align:top;color:#333}
+    td.input{padding:6px 8px}
+    input, select{width:100%;padding:6px;border:1px solid #bfbfbf;border-radius:2px}
+    .actions{margin-top:12px}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>payment</h1>
+
+    <form onsubmit="return validasiForm()">
+        <table>
+
+            <tr>
+                <td class="label">User Name</td>
+                <td class="input">
+                    <input type="text" id="username" name="username">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Password</td>
+                <td class="input">
+                    <input type="password" id="password" name="password">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">E-mail</td>
+                <td class="input">
+                    <input type="email" id="email" name="email">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Buku</td>
+                <td class="input">
+                    <select id="buku" name="buku" onchange="updateHarga()">
+                        <option value="">-- judul Buku --</option>
+                        <option value="mikrotik1">Mikrotik Kung Fu 1</option>
+                        <option value="mikrotik2">Mikrotik Kung Fu 2</option>
+                        <option value="mikrotik3">Mikrotik Kung Fu 3</option>
+                        <option value="mikrotik4">Mikrotik Kung Fu 4</option>
+                        <option value="wuthering">WUTHERING HEIGHTS</option>
+                        <option value="se7en">SE7EN</option>
+                        <option value="outsider">OUTSIDER</option>
+                        <option value="spectre">SPECTRE</option>
+                        <option value="comeback">COME BACK</option>
+                        <option value="hobbit">THE HOBBIT</option>
+                        <option value="dragon">DRAGON</option>
+                        <option value="lightfall">LIGHTFALL</option>
+                        <option value="kungfu">KUNG FU PANDA</option>
+                        <option value="beasts">BEASTS & BEAUTY</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Nominal</td>
+                <td class="input">
+                    <input type="text" id="nominal" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Jenis Pembayaran</td>
+                <td class="input">
+                    <select id="pembayaran" name="pembayaran">
+                        <option value="">-- metode Pembayaran --</option>
+                        <option>BCA</option>
+                        <option>MANDIRI</option>
+                        <option>BRI</option>
+                        <option>OVO</option>
+                        <option>DANA</option>
+                        <option>GOPAY</option>
+                        <option>ALFAMART</option>
+                        <option>INDOMART</option>
+                        <option>COD</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+        <div class="actions">
+            <button type="submit">kirim</button>
+            <button type="reset">hapus</button>
+        </div>
+    </form>
+</div>
+
+<!-- PANGGIL FILE JS -->
+<script src="script/harga.js"></script>
+
+</body>
+</html>
